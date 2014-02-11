@@ -37,6 +37,15 @@
         bs.searchform.toggleClass('active');
         bs.canvas.removeClass('search-overlay');
     });
+      $(document).ready(function(){
+          $(document).bind('keydown', function(e) {
+              if (e.which == 27) {
+              $('.search-wrapper').removeAttr( 'style' );
+              bs.searchform.toggleClass('active');
+              bs.canvas.removeClass('search-overlay');
+              }
+          });
+      });
   })( jQuery, window );
 </script>
 {% endif %}
